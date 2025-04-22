@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Dashboard</h1>
+<p>Welcome, {{ username }}!</p>
+<p>Your email: {{ email }}</p>
+
+{% if phone_number %}
+<p>Phone Number: {{ phone_number }}</p>
+{% endif %}
+
+{% if address %}
+<p>Address: {{ address }}</p>
+{% endif %}
+
+{% if profile_photo %}
+<img src="{{ profile_photo.url }}" alt="Profile Photo" style="max-width: 200px;">
+{% endif %}
+{% endblock %}
