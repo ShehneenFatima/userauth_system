@@ -29,3 +29,6 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['phone_number', 'address', 'profile_photo']
+        widgets = {
+            'address': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
+        }
